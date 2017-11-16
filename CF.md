@@ -1,6 +1,5 @@
-# Getting Start with Cloud Foundry
+# Getting Started with Cloud Foundry
 
-## Setting up the command line interface
 All of your interactions with Cloud Foundry will be through the command line. 
 
 ### Debian and Ubuntu-based Linux distributions Installation::
@@ -84,3 +83,13 @@ $ cf apps
 ```
 4. By default on application will be mapped automationcally to standard DNS (cf.hackovation.io), you can copy the DNS and open it on a web-browser.  
 
+## Services in Cloud Foundry Marketplace
+* Neo4J 3.0.2
+* PostgreSQL 9.4
+* MySQL 5.6
+* Redis 3.2.0
+* MongoDB 3.0.7
+* RabbitMQ 3.6.2
+* Zookeeper 3.4.6
+* Cassandra
+* Appache Jackrabbit
