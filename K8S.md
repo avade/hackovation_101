@@ -45,6 +45,20 @@ users:
 > kubectl config use-context k8s.hackovation.io
 > kubectl get all -n $namespace
 ```
+
+###### access the Kubernetes Dashboard per Namespace / Team
+Admin Dashboard for team can be accessed as a proxy as follows
+
+`Get the Kubernetes Dashboard URL by running:`
+```
+ export NS=team-1
+ kubectl get pods -n $NS -l "app=kubernetes-dashboard,release=dashboard-$NS" -o jsonpath="{.items[0].metadata.name}"
+ export POD_NAME=$(kubectl get pods -n $NS -l "app=kubernetes-dashboard,release=dashboard-$NS" -o jsonpath="{.items[0].metadata.name}")
+ echo http://127.0.0.1:9090/#!/deployment?namespace=$NS
+ kubectl -n $NS port-forward $POD_NAME 9090:9090
+ in Browser, replace the $NS
+ http://127.0.0.1:9090/#!/deployment?namespace=$NS
+```
   
 ## Demo App
 --TODO
