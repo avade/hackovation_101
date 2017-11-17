@@ -65,7 +65,7 @@ List all resources:
 kubectl get all
 ```
 
-#### Access the Kubernetes Dashboard per Namespace / Team
+#### Access the Kubernetes Dashboard
 Admin Dashboard for team can be accessed as a proxy as follows
 
 Get the Kubernetes Dashboard URL by running:
