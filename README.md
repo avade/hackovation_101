@@ -62,12 +62,9 @@ The [Open Service Broker API](https://github.com/openservicebrokerapi/servicebro
 All projects are implementing an idea conformed to "Open Service Broker API".
 
 2. Hackovation
-The Hackovation consist of four parts which are rated using the winning criterias below:
+The _Hackovation_ consists of four parts which are rated using the winning criteria below:
 
-  2.1. Creativeness & Innovativeness
-
-  2.2. Usefulness & Feasibility
-
-  2.3. Technology Stack
-
-  2.4. Presentation & Pitch
+ - Creativeness & Innovativeness
+ - Usefulness & Feasibility
+ - Technology Stack
+ - Presentation & Pitch
