@@ -10,11 +10,11 @@ We strongly believe in the power of open-source software because it is driving i
 * 08:00 - Registration & Breakfast
 * 09:30 - Welcome & Introduction
 * 09:45 - Technology Sessions
-⋅⋅⋅* **Cloud Foundry** by Christopher Banck - Pivotal
-⋅⋅⋅* **Kubernetes** by Ovidiu Isai, Ovidiu Hutuleac - Audi Business Innovation
-⋅⋅⋅* **Open Service Brokers API** by Alex Ley - Pivotal and OSBAPI Project Chair
-⋅⋅⋅* **Crossing Platform Architecture** by Florian Höll - Audi Business Innovation
-⋅⋅⋅* **In-Car Technology Services** by Dennis Huning - Audi Business Innovation
+---* **Cloud Foundry** by Christopher Banck - Pivotal
+---* **Kubernetes** by Ovidiu Isai, Ovidiu Hutuleac - Audi Business Innovation
+---* **Open Service Brokers API** by Alex Ley - Pivotal and OSBAPI Project Chair
+---* **Crossing Platform Architecture** by Florian Höll - Audi Business Innovation
+---* **In-Car Technology Services** by Dennis Huning - Audi Business Innovation
 * 11:30 - Lunch & Team forming
 * 12:00 - Hack begins!
 * 18:00 - Dinner
@@ -31,8 +31,8 @@ We strongly believe in the power of open-source software because it is driving i
 
 #### Open Service Broker API
 The [Open Service Broker API](https://github.com/openservicebrokerapi/servicebroker/blob/v2.13/spec.md) defines an HTTP interface between the services marketplace of a platform and service brokers.
-⋅⋅* [Sample Service Brokers](https://github.com/openservicebrokerapi/servicebroker/blob/master/gettingStarted.md#sample-service-brokers)
-⋅⋅* [Service Broker Libraries (Golang)](https://github.com/pmorie/go-open-service-broker-client)
+--* [Sample Service Brokers](https://github.com/openservicebrokerapi/servicebroker/blob/master/gettingStarted.md#sample-service-brokers)
+--* [Service Broker Libraries (Golang)](https://github.com/pmorie/go-open-service-broker-client)
 
 #### APIs Example
 * [Amazon Web Service](https://aws.amazon.com/documentation/) -- $50 Credit
@@ -59,9 +59,9 @@ All projects are implementing an idea conformed to "Open Service Broker API".
 
 2. Hackovation
 The Hackovation consist of four parts which are rated using the winning criterias below:
-⋅⋅⋅* 2.1. Creativeness & Innovativeness
-⋅⋅⋅* 2.2. Usefulness & Feasibility
-⋅⋅⋅* 2.3. Technology Stack
-⋅⋅⋅* 2.4. Presentation & Pitch
+---* 2.1. Creativeness & Innovativeness
+---* 2.2. Usefulness & Feasibility
+---* 2.3. Technology Stack
+---* 2.4. Presentation & Pitch
 
 
