@@ -3,7 +3,8 @@ Getting started with Kubernetes
 Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications
 
 ## Requirements
-Download and install the _kubectl_ utility for your plattform: https://kubernetes.io/docs/user-guide/kubectl/v1.7/
+Download and install the _kubectl_ utility for your platform:
+* https://kubernetes.io/docs/tasks/tools/install-kubectl/
 
 ## Login credentials
 In order to connect to the k8s API Server use the following endpoint: https://api.k8s.hackovation.io
@@ -28,6 +29,7 @@ Create the following file in your working directory:
 
 `kubeconfig`
 ```
+echo -n "
 apiVersion: v1
 clusters:
 - cluster:
@@ -45,7 +47,7 @@ preferences: {}
 users:
 - name: $NAMESPACE
   user:
-    token: $TOKEN
+    token: $TOKEN" > kubeconfig
 ```
 
 Configure _kubectl_
@@ -57,7 +59,7 @@ kubectl config use-context k8s.hackovation.io
 
 List all resources:
 ```
-kubectl get all -n $namespace
+kubectl get all -n $NAMESPACE
 ```
 
 #### Access the Kubernetes Dashboard per Namespace / Team
@@ -87,4 +89,5 @@ Now access the Dashboard in your Browser, replace the $NAMESPACE with the NAMESP
 --TODO
 
 ## Documentation
+* Kubectl User Guide: https://kubernetes.io/docs/user-guide/kubectl/v1.7/
 * Kubernetes API: https://kubernetes.io/docs/api-reference/v1.7
