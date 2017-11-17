@@ -17,7 +17,10 @@ We will provide you with the following credentials:
 ```
 export NAMESPACE=team-<team number>
 export TOKEN=<token>
+alias kubectl="kubectl --namespace $NAMESPACE"
 ```
+_Hint:_ If you omit the _alias_, you have to specify _--namespace_ for every _kubectl_ command.
+
 #### Connect using curl
 Run curl:
 ```
@@ -59,7 +62,7 @@ kubectl config use-context k8s.hackovation.io
 
 List all resources:
 ```
-kubectl get all -n $NAMESPACE
+kubectl get all
 ```
 
 #### Access the Kubernetes Dashboard per Namespace / Team
@@ -67,26 +70,70 @@ Admin Dashboard for team can be accessed as a proxy as follows
 
 Get the Kubernetes Dashboard URL by running:
 ```
-kubectl get pods -n $NAMESPACE -l "app=kubernetes-dashboard,release=dashboard-$NAMESPACE" -o jsonpath="{.items[0].metadata.name}"
-```
-
-Set the _pod_ name:
-```
 export POD_NAME=$(kubectl get pods -n $NAMESPACE -l "app=kubernetes-dashboard,release=dashboard-$NAMESPACE" -o jsonpath="{.items[0].metadata.name}")
-
-echo http://127.0.0.1:9090/#!/deployment?namespace=$NAMESPACE
 ```
 
 Forward the Dashboard webserver to your local machine:
 ```
-kubectl -n $NAMESPACE port-forward $POD_NAME 9090:9090
+kubectl -n $NAMESPACE port-forward $POD_NAME 9090:9090 &
 ```
 
-Now access the Dashboard in your Browser, replace the $NAMESPACE with the NAMESPACE from your environment (=team)
- http://127.0.0.1:9090/#!/deployment?namespace=$NAMEPSACE
+Now access the Dashboard in your Browser, replace the $NAMESPACE with the NAMESPACE from your environment (=team), e.g.:
 
-## Demo App
---TODO
+ http://127.0.0.1:9090/#!/deployment?namespace=team-4
+
+## Example deployment
+In the following example, you deploy a stateless application on your kubernetes namespace.
+
+This is based largely on: https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment/
+
+#### Create the deployment YAML
+```
+echo -n "
+apiVersion: apps/v1beta1 # for versions before 1.8.0 use apps/v1beta1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  namespace: $NAMESPACE
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template: # create pods using pod definition in this template
+    metadata:
+      # unlike pod-nginx.yaml, the name is not included in the meta data as a unique name is
+      # generated from the deployment name
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.7.9
+        ports:
+        - containerPort: 80" > deployment.yaml
+```
+
+#### Deploy the service
+```
+kubectl apply -f deployment.yaml
+```
+
+#### View information about your Deployment
+```
+kubectl describe deployment nginx-deployment
+```
+
+#### View information about the created Pods
+```
+kubectl describe pods
+```
+
+#### Delete your deployment
+```
+kubectl delete -f deployment.yaml
+```
+
 
 ## Documentation
 * Kubectl User Guide: https://kubernetes.io/docs/user-guide/kubectl/v1.7/
