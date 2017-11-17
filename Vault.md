@@ -1,17 +1,30 @@
-Getting started with HashiCorp Vault
+Getting started with Vault
 ===================================
-Placeholder short vault description
 
-# Installation steps:
-## download and install the vault client binaries for your OS from URL:
-https://www.vaultproject.io/downloads.html </br>
-test the installation with `vault -h`
-## export the Environment variable, depends on your OS, in *UNIX OS like this:
-`export VAULT_ADDR=https://cicd-vault.tools.msi.audi.com`
-## authenticate yourself with the given token like:
-replace the given token with your team given token
-`vault auth <given-token>`
-## Retrieving your Hackathon credentials
-replace the team placeholder with your team number
-`vault read HACKOVATION/<team-1>`
+We provide all cerdentials via token from Vault. You will get a team-token from TECH-TEAM before the hack begins. Please follow this introduction:
 
+1. Download Vault client package and install:
+```
+https://www.vaultproject.io/downloads.html
+```
+
+2. To verify your installation, open a terminal window and type:
+```
+vault -h
+```
+
+3. Export Vault environment variable: 
+```
+export VAULT_ADDR=https://cicd-vault.tools.msi.audi.com
+```
+
+4. Authenticate with the given token:
+```
+vault auth <GIVEN-TOCKEN>
+```
+
+5. Get all credentials for hackathon:
+```
+vault read HACKOVATION/team-0
+```
+Replace the team placeholder with your team-number

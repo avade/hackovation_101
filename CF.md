@@ -29,7 +29,7 @@ $ sudo wget -O /etc/yum.repos.d/cloudfoundry-cli.repo https://packages.cloudfoun
 $ sudo yum install cf-cli
 ```
 
-### Mac OS X Installation::
+### Mac OS Installation::
 
 1. Download the OS X installer from: 
 ```
@@ -52,7 +52,7 @@ https://cli.run.pivotal.io/stable?release=windows64&source=github
 4. When prompted, click Install, then Close.
 
 
-To verify your installation, open a terminal window and type
+To verify your installation, open a terminal window and type:
 ```
 $ cf -v
 ```
@@ -64,7 +64,7 @@ If your installation was successful, the cf CLI help listing appears.
 $ cf login -a https://api.us-west-2.apps.msi.audi.com
 ```
 
-Immediately after you will be redirected to organizatin "hackovation" and your team spaec, you will only see organization and space that you have permisstion. If you come up with an idea to interact with more than one space as TECHTEAM to provied you more team space. 
+Immediately after you will be redirected to organizatin "hackovation" and your team spaec, you will only see organization and space that you have permisstion. If you come up with an idea to interact with more than one space as TECH-TEAM to provied you more team space. 
 
 
 ## Deploy a "Simple" application
