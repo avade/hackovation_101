@@ -1,6 +1,8 @@
 # Getting Started with Cloud Foundry
 
-All of your interactions with Cloud Foundry will be through the command line. 
+All of your interactions with Cloud Foundry will be through the command line.
+
+Have a look at the official _Getting Started Guide_ if you are not familiar with it yet: https://docs.cloudfoundry.org/cf-cli/getting-started.html
 
 ### Debian and Ubuntu-based Linux distributions Installation::
 
@@ -31,7 +33,7 @@ $ sudo yum install cf-cli
 
 ### Mac OS Installation::
 
-1. Download the OS X installer from: 
+1. Download the OS X installer from:
 ```
 https://cli.run.pivotal.io/stable?release=macosx64&source=github
 ```
@@ -43,7 +45,7 @@ https://cli.run.pivotal.io/stable?release=macosx64&source=github
 
 ### Windows Installation::
 
-1. Download the Windows installer from: 
+1. Download the Windows installer from:
 ```
 https://cli.run.pivotal.io/stable?release=windows64&source=github
 ```
@@ -64,26 +66,32 @@ If your installation was successful, the cf CLI help listing appears.
 $ cf login -a https://api.us-west-2.apps.msi.audi.com
 ```
 
-Immediately after you will be redirected to organizatin "hackovation" and your team spaec, you will only see organization and space that you have permisstion. If you come up with an idea to interact with more than one space as TECH-TEAM to provied you more team space. 
+You will be redirected to the organisation "hackovation" and your team space. Only organisations and spaces that you have permission for will be displayed. If you come up with an idea to interact with more than one space ask TECH-TEAM to grant you access to more than one space.
 
 
 ## Deploy a "Simple" application
 
-1. Clone repocitory to you local:
+1. Clone the following repository:
 ```
 $ git clone https://github.com/abi-open/cf-sample-app-spring
 ```
-2. Push you application:
+2. Push your application:
 ```
 $ cf push
 ```
-3. Check if you applicaiton is running:
+3. Check if you application is running:
 ```
 $ cf apps
 ```
-4. By default on application will be mapped automationcally to standard DNS (cf.hackovation.io), you can copy the DNS and open it on a web-browser.  
+4. By default on application will be mapped automatically to the standard DNS entry (cf.hackovation.io), you can copy the domain name and open it on a web-browser.
+
+5. Delete your app after you are finished with it
+```
+$ cf delete cf-hackovation
+```
 
 ## Services in Cloud Foundry Marketplace
+The following services are available in our Cloud Foundry Marketplace, use them as you see fit:
 * Neo4J 3.0.2
 * PostgreSQL 9.4
 * MySQL 5.6
@@ -92,4 +100,4 @@ $ cf apps
 * RabbitMQ 3.6.2
 * Zookeeper 3.4.6
 * Cassandra
-* Appache Jackrabbit
+* Apache Jackrabbit
