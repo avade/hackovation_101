@@ -31,7 +31,7 @@ We strongly believe in the power of open-source software because it is driving i
 
 ### Getting Started with Hackathon
 
-First, get zour credentials from [Vault](https://github.com/ABI-OPEN/hackovation_101/blob/master/Vault.md), then choose what you what to hack: 
+First, get your credentials from [Vault](https://github.com/ABI-OPEN/hackovation_101/blob/master/Vault.md), then choose what you what to hack: 
 
 * [Amazon Web Service](https://github.com/ABI-OPEN/hackovation_101/blob/master/AWS.md)
 * [Kubernetes](https://github.com/ABI-OPEN/hackovation_101/blob/master/K8S.md)
@@ -45,13 +45,12 @@ The [Open Service Broker API](https://github.com/openservicebrokerapi/servicebro
 
 
 #### APIs Example
-* [Amazon Web Service](https://aws.amazon.com/documentation/) -- $50 Credit
+* [Amazon Web Service](https://aws.amazon.com/documentation/) -- $30 Credit
 * [Google Cloud Platform](https://cloud.google.com/apis/) -- [$300 Free Trial](https://console.cloud.google.com/freetrial?_ga=2.122675855.-540444492.1504637415&pli=1&page=0)
 * [Microsoft Azure](https://docs.microsoft.com/en-us/rest/api/apimanagement/) -- [$200 Free Trial](https://azure.microsoft.com/en-us/free/)
 * [Cloud Foundry](https://apidocs.cloudfoundry.org/256/)
 * [Kubernetes](https://kubernetes.io/docs/concepts/overview/kubernetes-api/)
 * Any open-source services with RESTful API
-
 
 
 #### Criteria 
