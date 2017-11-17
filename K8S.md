@@ -9,7 +9,7 @@ Download and install the _kubectl_ utility for your platform:
 ## Login credentials
 In order to connect to the k8s API Server use the following endpoint: https://api.k8s.hackovation.io
 
-We will provide you with the following credentials:
+We will provide you with the following credentials via VAULT:
 * `Username` - The username/namespace to use, e.g. _team-1_
 * `Token` - The secret token used to authenticate, e.g. _eyJhbGciOiJSUzI1NiIs_
 

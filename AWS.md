@@ -4,10 +4,10 @@ Getting Started with AWS
 * Getting Started Resource Center: https://aws.amazon.com/getting-started/
 
 ## Login credentials
-We will provide you with the following credentials:
+We will provide you with the following credentials via VAULT:
 * `LoginUrl` - AWS Management Console login URL, e.g. _https://<account-id>.signin.aws.amazon.com/console_
 * `Username` - AWS Management Console username, e.g. _team-X@hackovation.io_
-* `Password` - AWS Managment Console password, e.g. _ABC_
+* `Password` - AWS Management Console password, e.g. _ABC_
 
 #### Creating access keys
 To access the service programmatically, you will need to create access keys. You can find everything you need to know on how to do this here: http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey
