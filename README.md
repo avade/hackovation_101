@@ -1,6 +1,6 @@
 # Hackovation 2017 - Open Service Broker API
 
-Welcome to Hackovation, a hackthon by Audi Business Innovation GmbH. The challenge of this hackovation is based on developing service-broker conforming to the Open Service Brokers API, RESTful services, and hardware of your choice. New ideas of managing services, binding services across platforms, automating infrastructure that will shape completely services providing on the cloud.
+Welcome to Hackovation, a hackathon by Audi Business Innovation GmbH. The challenge of this hackovation is based on developing a service-broker conforming to the Open Service Brokers API, RESTful services, and hardware of your choice. We encourage new ideas of managing services, binding services across platforms, automating infrastructure that will shape completely services providing on the cloud.
 
 We strongly believe in the power of open-source software because it is driving innovation! Everything developed during the hackathon will remain open-source projects (MIT) and contribution will continue by Audi Business Innovation. Furthermore, we'll publish some of our service-brokers to the community!
 
@@ -31,7 +31,10 @@ We strongly believe in the power of open-source software because it is driving i
 
 ### Getting Started with Hackathon
 
-First, get your credentials from [Vault](https://github.com/ABI-OPEN/hackovation_101/blob/master/Vault.md), then choose what you what to hack: 
+First, get your credentials from
+* [Vault](https://github.com/ABI-OPEN/hackovation_101/blob/master/Vault.md)
+
+then choose what you want to hack:
 
 * [Amazon Web Service](https://github.com/ABI-OPEN/hackovation_101/blob/master/AWS.md)
 * [Kubernetes](https://github.com/ABI-OPEN/hackovation_101/blob/master/K8S.md)
@@ -53,16 +56,18 @@ The [Open Service Broker API](https://github.com/openservicebrokerapi/servicebro
 * Any open-source services with RESTful API
 
 
-#### Criteria 
+#### Goals
 
 1. Open Service Broker API
 All projects are implementing an idea conformed to "Open Service Broker API".
 
 2. Hackovation
 The Hackovation consist of four parts which are rated using the winning criterias below:
-  * 2.1. Creativeness & Innovativeness
-  * 2.2. Usefulness & Feasibility
-  * 2.3. Technology Stack
-  * 2.4. Presentation & Pitch
 
+  2.1. Creativeness & Innovativeness
 
+  2.2. Usefulness & Feasibility
+
+  2.3. Technology Stack
+
+  2.4. Presentation & Pitch

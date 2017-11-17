@@ -3,7 +3,7 @@ Getting Started with AWS
 * Getting Started with the AWS Managment Console: http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/getting-started.html
 * Getting Started Resource Center: https://aws.amazon.com/getting-started/
 
-## Login
+## Login credentials
 We will provide you with the following credentials:
 * `LoginUrl` - AWS Management Console login URL, e.g. _https://<account-id>.signin.aws.amazon.com/console_
 * `Username` - AWS Management Console username, e.g. _team-X@hackovation.io_

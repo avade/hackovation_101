@@ -1,21 +1,30 @@
 Getting started with Kubernetes
 =========
 Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications
- 
-## How to connect
-In order to connect to the k8s API Server use the following endpoint: https://api.k8s.hackovation.io
-More information on Kubernetes API: https://kubernetes.io/docs/api-reference/v1.7
-Kubectl tool: https://kubernetes.io/docs/user-guide/kubectl/v1.7/
 
-#### Example:
-###### using curl
->NAMESPACE=team-1
-> TOKEN=<token>
-> curl -kD - -H "Authorization: Bearer $TOKEN" https://api.k8s.hackovation.io/api/v1/namespaces/$NAMESPACE/
-  
-###### using kubectl
-> NAMESPACE=team-1
-> TOKEN=<token>
+## Requirements
+Download and install the _kubectl_ utility for your plattform: https://kubernetes.io/docs/user-guide/kubectl/v1.7/
+
+## Login credentials
+In order to connect to the k8s API Server use the following endpoint: https://api.k8s.hackovation.io
+
+We will provide you with the following credentials:
+* `Username` - The username/namespace to use, e.g. _team-1_
+* `Token` - The secret token used to authenticate, e.g. _eyJhbGciOiJSUzI1NiIs_
+
+#### Setup your environment
+```
+export NAMESPACE=team-<team number>
+export TOKEN=<token>
+```
+#### Connect using curl
+Run curl:
+```
+curl -kD - -H "Authorization: Bearer $TOKEN" https://api.k8s.hackovation.io/api/v1/namespaces/$NAMESPACE/
+```
+
+#### Connect using kubectl
+Create the following file in your working directory:
 
 `kubeconfig`
 ```
@@ -39,27 +48,43 @@ users:
     token: $TOKEN
 ```
 
+Configure _kubectl_
 ```
-> export KUBECONFIG="$(pwd)/kubeconfig"
-> kubectl config view
-> kubectl config use-context k8s.hackovation.io
-> kubectl get all -n $namespace
+export KUBECONFIG="$(pwd)/kubeconfig"
+kubectl config view
+kubectl config use-context k8s.hackovation.io
 ```
 
-###### access the Kubernetes Dashboard per Namespace / Team
+List all resources:
+```
+kubectl get all -n $namespace
+```
+
+#### Access the Kubernetes Dashboard per Namespace / Team
 Admin Dashboard for team can be accessed as a proxy as follows
 
-`Get the Kubernetes Dashboard URL by running:`
+Get the Kubernetes Dashboard URL by running:
 ```
- export NS=team-1
- kubectl get pods -n $NS -l "app=kubernetes-dashboard,release=dashboard-$NS" -o jsonpath="{.items[0].metadata.name}"
- export POD_NAME=$(kubectl get pods -n $NS -l "app=kubernetes-dashboard,release=dashboard-$NS" -o jsonpath="{.items[0].metadata.name}")
- echo http://127.0.0.1:9090/#!/deployment?namespace=$NS
- kubectl -n $NS port-forward $POD_NAME 9090:9090
- in Browser, replace the $NS
- http://127.0.0.1:9090/#!/deployment?namespace=$NS
+kubectl get pods -n $NAMESPACE -l "app=kubernetes-dashboard,release=dashboard-$NAMESPACE" -o jsonpath="{.items[0].metadata.name}"
 ```
-  
+
+Set the _pod_ name:
+```
+export POD_NAME=$(kubectl get pods -n $NAMESPACE -l "app=kubernetes-dashboard,release=dashboard-$NAMESPACE" -o jsonpath="{.items[0].metadata.name}")
+
+echo http://127.0.0.1:9090/#!/deployment?namespace=$NAMESPACE
+```
+
+Forward the Dashboard webserver to your local machine:
+```
+kubectl -n $NAMESPACE port-forward $POD_NAME 9090:9090
+```
+
+Now access the Dashboard in your Browser, replace the $NAMESPACE with the NAMESPACE from your environment (=team)
+ http://127.0.0.1:9090/#!/deployment?namespace=$NAMEPSACE
+
 ## Demo App
 --TODO
 
+## Documentation
+* Kubernetes API: https://kubernetes.io/docs/api-reference/v1.7
