@@ -45,7 +45,7 @@ then choose what you want to hack:
 The [Open Service Broker API](https://github.com/openservicebrokerapi/servicebroker/blob/v2.13/spec.md) defines an HTTP interface between the services marketplace of a platform and service brokers.
   * [Sample Service Brokers](https://github.com/openservicebrokerapi/servicebroker/blob/master/gettingStarted.md#sample-service-brokers)
   * [Service Broker Libraries (Golang)](https://github.com/pmorie/go-open-service-broker-client)
-
+  * [Introduction Slides](https://speakerdeck.com/avade/osbapi-at-hackovation)
 
 #### APIs Example
 * [Amazon Web Service](https://aws.amazon.com/documentation/) -- $30 Credit
